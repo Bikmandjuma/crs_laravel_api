@@ -10,6 +10,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\AvailabilityController;
 use App\Http\Controllers\ScheduleController;
+use App\Http\Controllers\Api\SensorController;
 
 Route::post('login',[AuthController::class,'login']);
 Route::post('register',[AuthController::class,'register']);
@@ -37,6 +38,9 @@ Route::group(['prefix'=>'user','middleware'=>'UserAuth'],function(){
     Route::delete('/schedules/{id}', [ScheduleController::class, 'destroy']);
     Route::post('/userDeletedAccount', [UserController::class, 'deleteAccount']);
     Route::post('/UserUpdateimage', [UserController::class, 'Updateimage']);
+	Route::post('/sensor-data', [SensorController::class,'store']);
+	Route::get('/sensor-data/latest', [SensorController::class,'latest']);
+
 });
 
 Route::post('/availability/{slug}', [AvailabilityController::class, 'request']);
