@@ -15,6 +15,7 @@
         "laravel/socialite": "^5.16",
         "laravel/tinker": "^2.9",
         "lcobucci/jwt": "^4.3",
+        "php-mqtt/client": "^2.3",
         "sendgrid/sendgrid": "^8.1",
         "tymon/jwt-auth": "^2.1"
     },

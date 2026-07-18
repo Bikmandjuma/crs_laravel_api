@@ -13,6 +13,8 @@ class SensorReading extends Model
         'temperature',
         'pH',
         'soil_moisture',
-        'conductivity'
+        'conductivity',
+        'weather_temperature',
+        'weather_humidity',
     ];
 }
